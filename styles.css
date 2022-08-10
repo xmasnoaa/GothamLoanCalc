@@ -1,0 +1,39 @@
+/*classes*/
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-flow: column wrap;
+}
+
+.card,
+#results {
+  align-items: center;
+}
+
+#loader {
+  display: none;
+  border: 1rem solid #f3f3f3;
+  border-top: 1rem solid #1f66cf;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  animation: spin 1s linear infinite;
+}
+
+#results {
+  display: none;
+}
+#calculator {
+  justify-content: space-between;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gotham City Bank</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="card flex column">
+      <h1>Loan Calculator</h1>
+      <form id="calculator" class="flex">
+        <input type="number" name="" id="amount" placeholder="Loan Amount" />
+        <input type="number" id="interest" placeholder="Interest" />
+        <input type="number" id="years" placeholder="Years to Repay" />
+        <input type="submit" value="Calcuate" />
+      </form>
+    </div>
+    <!-- Loader Here-->
+
+    <div id="loader"></div>
+
+    <!-- Results -->
+    <div id="results">
+      <h2>Results</h2>
+
+      <div class="flex column">
+        <span>Monthly Payment</span>
+        <input type="number" id="monthly-payment" disabled />
+      </div>
+
+      <div class="flex column">
+        <span>Total Payment</span>
+        <input type="number" id="total-payment" disabled />
+      
+        
+        <div class="flex column">
+      <span>Total Interest</span>
+      <input type="number" id="total-interest" disabled />
+    </div>
+    </div>
+  </body>
+</html>
