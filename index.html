@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gotham City Bank</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="game.css" />
+
     <script src="app.js" defer></script>
+    <script src="game.js" defer></script>
   </head>
   <body>
     <div class="card flex column">
@@ -15,31 +18,29 @@
         <input type="number" name="" id="amount" placeholder="Loan Amount" />
         <input type="number" id="interest" placeholder="Interest" />
         <input type="number" id="years" placeholder="Years to Repay" />
-        <input type="submit" value="Calcuate" />
+        <input type="submit" value="Calcuate" id="submit" />
       </form>
     </div>
     <!-- Loader Here-->
-
-    <div id="loader"></div>
-
+    <div class="flex column loading">
+      <div id="loader"></div>
+    </div>
     <!-- Results -->
-    <div id="results">
+    <div id="results" class="column">
       <h2>Results</h2>
 
-      <div class="flex column">
-        <span>Monthly Payment</span>
-        <input type="number" id="monthly-payment" disabled />
-      </div>
+      <span>Monthly Payment</span>
+      <input type="number" id="monthly-payment" disabled />
 
-      <div class="flex column">
-        <span>Total Payment</span>
-        <input type="number" id="total-payment" disabled />
-      
-        
-        <div class="flex column">
+      <span>Total Payment</span>
+      <input type="number" id="total-payment" disabled />
+
       <span>Total Interest</span>
       <input type="number" id="total-interest" disabled />
     </div>
+
+    <div class="camera">
+      <div class="map pixel-art" facing="down" walking="true"></div>
     </div>
   </body>
 </html>

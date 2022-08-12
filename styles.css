@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+input {
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+span {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 /*classes*/
 
 .flex {
@@ -8,11 +30,16 @@
   flex-flow: column wrap;
 }
 
-.card,
-#results {
+.card {
   align-items: center;
 }
 
+.loading {
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* IDs */
 #loader {
   display: none;
   border: 1rem solid #f3f3f3;
@@ -25,15 +52,40 @@
 
 #results {
   display: none;
+  align-items: center;
 }
-#calculator {
-  justify-content: space-between;
+
+div#results input {
+  width: 15rem;
 }
+
+#submit {
+  color: white;
+  background-color: #1f66cf;
+  border: none;
+}
+/*Animations*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 768px) {
+  form input {
+    margin: 0.1rem;
+  }
+  form input:nth-child(-n + 3) {
+    width: 15rem;
+  }
+
+  #calculator {
+    flex-flow: column nowrap;
+    align-items: center;
   }
 }
