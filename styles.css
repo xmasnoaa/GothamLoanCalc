@@ -21,6 +21,10 @@ span {
 }
 
 /*classes*/
+.alert {
+  color: red;
+  margin-top: 1rem;
+}
 
 .flex {
   display: flex;
@@ -63,6 +67,7 @@ div#results input {
   color: white;
   background-color: #1f66cf;
   border: none;
+  cursor: pointer;
 }
 /*Animations*/
 @keyframes spin {
